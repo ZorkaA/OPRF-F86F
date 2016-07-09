@@ -102,7 +102,27 @@ var Radar = {
         
         
         
-        
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
         # sweep : if have no sweep, we do not have to call internal very specific properties (This is one of the last part to tune)
 
           m.SwpMarker         = 0;
@@ -1393,3 +1413,8 @@ var rounding1000 = func(n){
 }
 
 
+var myRadar3 = radar.Radar.new(NewRangeTab:[10, 20, 40, 60, 160],NewRangeIndex:1,forcePath:"instrumentation/radar2/targets",NewAutoUpdate:1);
+
+myRadar3.init();
+
+myRadar3.radar_mode_toggle()

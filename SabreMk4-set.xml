@@ -495,7 +495,7 @@ Many thanks to Gary Brown and Robert Maheu for the default Liveries.</text>
 		<damage>
 			<file>Aircraft/F-86/Nasal/damage.nas</file>
 		</damage>
-                radar>
+                <radar>
       <file>Aircraft/F-86/Nasal/radar2.nas</file>
     </radar>
 
