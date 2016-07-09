@@ -463,7 +463,7 @@ var Radar = {
         {
             InDoppler = 1;
         }
-        return InDoppler;
+        return 1;
     },
 
     isGroundNotBehind: func(SelectedObject){
@@ -898,6 +898,7 @@ var Target = {
         obj.Speed           = c.getNode("velocities/true-airspeed-kt");
         obj.VSpeed          = c.getNode("velocities/vertical-speed-fps");
         obj.Callsign        = c.getNode("callsign");
+        #print("found "~obj.Callsign.getValue());
         obj.name            = c.getNode("name");
         obj.Valid            = c.getNode("valid");
         obj.validTree       = 0;
@@ -1393,3 +1394,17 @@ var rounding1000 = func(n){
 }
 
 
+<<<<<<< HEAD
+=======
+setprop("instrumentation/radar2/sweep-width-m", 1000);
+setprop("instrumentation/radar2/radius-ppi-display-m", 1000);
+setprop("instrumentation/radar/mode/tws-auto", 1);
+setprop("instrumentation/radar/mode/rws", 0);
+setprop("systems/electrical/outputs/radar", 30);
+
+var myRadar3 = Radar.new(NewRangeTab:[10, 20, 40, 60, 160],NewRangeIndex:1,forcePath:"instrumentation/radar2/targets",NewAutoUpdate:1);
+
+myRadar3.init();
+
+#myRadar3.radar_mode_toggle()
+>>>>>>> 62b7ca5d5426b4e99a43cdba581e8a41d7e26bf2
