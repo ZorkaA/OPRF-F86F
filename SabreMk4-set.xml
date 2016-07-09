@@ -489,9 +489,16 @@ Many thanks to Gary Brown and Robert Maheu for the default Liveries.</text>
 		<gunsight>
 			<file>Aircraft/F-86/Models/Instruments/A4Sight/a4sight.nas</file>
 		</gunsight>
+                 <guns>
+			<file>Aircraft/F-86/Nasal/guns.nas</file>
+		</guns>
 		<damage>
 			<file>Aircraft/F-86/Nasal/damage.nas</file>
 		</damage>
+                radar>
+      <file>Aircraft/F-86/Nasal/radar2.nas</file>
+    </radar>
+
   </nasal>
 
 </PropertyList>
