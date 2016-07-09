@@ -5,8 +5,10 @@ var last_impact = 0;
 var hit_count = 0;
 
 var impact_listener = func {
-  if (radar.nearest_u != nil and (input.elapsed.getValue()-last_impact) > 1) {
-    var ballistic_name = input.impact.getValue();
+  
+  if (radar.myRadar3.Target_Index != nil and (getprop("sim/time/elapsed-sec")-last_impact) > 1) {
+    var target = radar.myRadar3.tgts_list[radar.myRadar3.Target_Index];
+    var ballistic_name = getprop("/ai/models/model-impact");
     var ballistic = props.globals.getNode(ballistic_name, 0);
     if (ballistic != nil) {
       var typeNode = ballistic.getNode("impact/type");
@@ -15,12 +17,12 @@ var impact_listener = func {
         var lon = ballistic.getNode("impact/longitude-deg").getValue();
         var impactPos = geo.Coord.new().set_latlon(lat, lon);
 
-        var selectionPos = radar.nearest_u.get_Coord();
+        var selectionPos = target.get_Coord();
 
         var distance = impactPos.distance_to(selectionPos);
         if (distance < 125) {
-          last_impact = input.elapsed.getValue();
-          var phrase =  ballistic.getNode("name").getValue() ~ " hit: " ~ radar.nearest_u.get_Callsign();
+          last_impact = getprop("sim/time/elapsed-sec");
+          var phrase =  ballistic.getNode("name").getValue() ~ " hit: " ~ target.get_Callsign();
           if (getprop("payload/armament/msg")) {
             defeatSpamFilter(phrase);
 			      #hit_count = hit_count + 1;
@@ -64,4 +66,4 @@ var spamLoop = func {
 
 spamLoop();
 
-("payload/armament/msg", 1);
+setprop("payload/armament/msg", 1);
