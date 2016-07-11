@@ -174,7 +174,7 @@ var incoming_listener = func {
               nearby_explosion();
             }
           } 
-        } elsif (last_vector[1] == " M70 rocket hit" or last_vector[1] == " M55 cannon shell hit" or last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " M61A1 shell hit" or last_vector[1] == " GAU-8/A hit") {
+        } elsif (last_vector[1] == " M70 rocket hit" or last_vector[1] == " M55 cannon shell hit" or last_vector[1] == " KCA cannon shell hit" or last_vector[1] == " Gun Splash On " or last_vector[1] == " M61A1 shell hit" or last_vector[1] == " GAU-8/A hit" " left-up hit" or last_vector[1] == " " left-mid hit" or last_vector[1] == " " left-down hit" or last_vector[1] == " " right-up hit" or last_vector[1] == " " right-mid hit" or last_vector[1] == " " left-down hit" or last_vector[1] == ") {
           # cannon hitting someone
           #print("cannon");
           if (size(last_vector) > 2 and last_vector[2] == " "~callsign) {

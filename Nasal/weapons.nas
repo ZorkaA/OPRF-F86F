@@ -172,16 +172,16 @@ var fire_sidewinder = func () {
 		print ("fox one!");
 }
 
-#setlistener("/ai/submodels/submodel[1]/count", func(n) {
-#    var count = n.getValue();
-#		print ( count, " " , times0 * tracerevery);
-#		tracergun0.setValue(0);
-#		if (count <= times0 * tracerevery) {
-#					print ("tracer at§" , count);
-#				 tracergun0.setValue(1);
-#					times0.setValue(times0 -1 );
-#		}
-#});
+setlistener("/ai/submodels/submodel[1]/count", func(n) {
+    var count = n.getValue();
+		print ( count, " " , times0 * tracerevery);
+		tracergun0.setValue(0);
+		if (count <= times0 * tracerevery) {
+					print ("tracer at§" , count);
+				 tracergun0.setValue(1);
+					times0.setValue(times0 -1 );
+		}
+});
 
 #setlistener("sim/model/aircraft/impact/gun", func(n) {
 #    var impact = n.getValue();
