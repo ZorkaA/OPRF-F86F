@@ -2,9 +2,7 @@
 
 North American F-86 Sabre
 
-by Detlef Faber
-don@sol2500.net
+RENAME FOLDER TO F-86 TO GET THE AIRCRAFT TO LOAD CORRECTLY 
 
 This model is released under the terms of the GPLv2
 
-Many thanks to Gary Brown and Robert Maheu for the default Liveries.
