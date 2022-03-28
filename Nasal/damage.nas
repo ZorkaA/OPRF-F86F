@@ -22,7 +22,7 @@ var rwr_to_screen=1; # for aircraft that do not yet have proper RWR
 var tacview_supported=0; # For aircraft with tacview support
 var m28_auto=0; # only used by automats
 var mlw_max=2.25; # 
-var auto_flare_caller = 0; # If damage.nas should detect flare releases, or if function is called from somewhere in aircraft
+var auto_flare_caller = 1; # If damage.nas should detect flare releases, or if function is called from somewhere in aircraft
 ############################################################################################################################
 
 var TRUE  = 1;
