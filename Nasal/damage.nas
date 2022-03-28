@@ -8,7 +8,7 @@
 
 
 ############################ Config ########################################################################################
-var full_damage_dist_m = 0;# Can vary from aircraft to aircraft depending on how many failure modes it has.
+var full_damage_dist_m = 1;# Can vary from aircraft to aircraft depending on how many failure modes it has.
                            # Many modes (like Viggen) ought to have lower number like zero.
                            # Few modes (like F-14) ought to have larger number such as 3.
                            # For assets this should be average radius of the asset.
